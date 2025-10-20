@@ -3,36 +3,34 @@
 #include <cmath>
 #include <algorithm>
 
-APerlinNoise1D::APerlinNoise1D() = default;
-
-bool APerlinNoise1D::Init(int nBufferLen, float vAmplitude, int nWaveLength, float vPersistence, int nOctaveNum, unsigned int dwRandSeed)
+bool APerlinNoise1D::Init(int nBufferWidth, float vAmplitude, int nWaveLength, float vPersistence, int nOctaveNum, unsigned int dwRandSeed)
 {
 	// First try to release old resource
 	Release();
 
-	if (nBufferLen <= 0)
+	if (nBufferWidth <= 0)
 		return false;
 
 	m_dwSeed = dwRandSeed;
-	m_nBufferLen = nBufferLen;
+	m_nBufferWidth = nBufferWidth;
 
 	// Resize vector to hold buffer
-	m_values.assign(m_nBufferLen, NOISEVALUE{});
+	m_values.assign(m_nBufferWidth, NOISEVALUE{});
 
 	// Temporary buffer for smoothing (one channel at a time)
-	std::vector<float> tempBuffer(m_nBufferLen);
+	std::vector<float> tempBuffer(m_nBufferWidth);
 
 	for (int k = 0; k < 3; ++k)
 	{
 		// Generate random values
-		for (int i = 0; i < m_nBufferLen; ++i)
+		for (int i = 0; i < m_nBufferWidth; ++i)
 			tempBuffer[i] = RandFloat();
 
 		// Smooth: 0.25*prev + 0.5*current + 0.25*next (with wrap-around)
-		for (int i = 0; i < m_nBufferLen; ++i)
+		for (int i = 0; i < m_nBufferWidth; ++i)
 		{
-			int prev = (i - 1 + m_nBufferLen) % m_nBufferLen;
-			int next = (i + 1) % m_nBufferLen;
+			int prev = (i - 1 + m_nBufferWidth) % m_nBufferWidth;
+			int next = (i + 1) % m_nBufferWidth;
 
 			m_values[i].v[k] = 0.25f * tempBuffer[prev] +
 				0.5f * tempBuffer[i] +
@@ -47,7 +45,7 @@ bool APerlinNoise1D::Release()
 {
 	m_values.clear();
 	m_values.shrink_to_fit();
-	m_nBufferLen = 0;
+	m_nBufferWidth = 0;
 
 	return true;
 }
@@ -96,7 +94,7 @@ void APerlinNoise1D::GetRandValues(int n, float* pvValues, int nNumValue)
 	const int num = std::min(nNumValue, 3);
 
 	// Wrap n into valid range [0, m_nBufferLen)
-	n = ((n % m_nBufferLen) + m_nBufferLen) % m_nBufferLen;
+	n = ((n % m_nBufferWidth) + m_nBufferWidth) % m_nBufferWidth;
 
 	for (int i = 0; i < num; ++i)
 		pvValues[i] = m_values[n].v[i];

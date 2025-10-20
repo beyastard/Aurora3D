@@ -8,11 +8,13 @@
 class APerlinNoise1D : public APerlinNoiseBase
 {
 public:
-	APerlinNoise1D();
-	~APerlinNoise1D();
+	APerlinNoise1D() = default;
+	~APerlinNoise1D() = default;
 
 	// The peroid will be nBufferLen * nWaveLength
-	bool Init(int nBufferLen, float vAmplitude, int nWaveLength, float vPersistence, int nOctaveNum, unsigned int dwRandSeed);
+	bool Init(int nBufferWidth, float vAmplitude, int nWaveLength,
+		float vPersistence, int nOctaveNum, unsigned int dwRandSeed);
+
 	bool Release();
 
 	// Get a value, containing 1D, 2D or 3D continuous and smooth random data. 
@@ -23,7 +25,7 @@ protected:
     void GetRandValues(int n, float* pvValues, int nNumValue);
 
 private:
-    int m_nBufferLen;
+    int m_nBufferWidth;
 	std::vector<NOISEVALUE> m_values; // the spool buffer containing rand values, maximum contains 3 number value
 };
 
