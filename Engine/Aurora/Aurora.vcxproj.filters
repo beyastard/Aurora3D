@@ -48,6 +48,9 @@
     <ClCompile Include="src\AFI.cpp">
       <Filter>Source Files\File</Filter>
     </ClCompile>
+    <ClCompile Include="src\AFile.cpp">
+      <Filter>Source Files\File</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\ATime.h">
@@ -75,6 +78,9 @@
       <Filter>Header Files\File</Filter>
     </ClInclude>
     <ClInclude Include="include\AFI.h">
+      <Filter>Header Files\File</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AFile.h">
       <Filter>Header Files\File</Filter>
     </ClInclude>
   </ItemGroup>

@@ -314,6 +314,7 @@ xcopy .\include\*.h ..\..\AuroraSDK\Aurora3D\include\ /Y /D /Q /R</Command>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\AFI.cpp" />
+    <ClCompile Include="src\AFile.cpp" />
     <ClCompile Include="src\ALog.cpp" />
     <ClCompile Include="src\APerlinNoise1D.cpp" />
     <ClCompile Include="src\APerlinNoise2D.cpp" />
@@ -323,6 +324,7 @@ xcopy .\include\*.h ..\..\AuroraSDK\Aurora3D\include\ /Y /D /Q /R</Command>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\AFI.h" />
+    <ClInclude Include="include\AFile.h" />
     <ClInclude Include="include\AFPI.h" />
     <ClInclude Include="include\ALog.h" />
     <ClInclude Include="include\APath.h" />
