@@ -1,11 +1,7 @@
 #ifndef _ALOG_H_
 #define _ALOG_H_
 
-#include <string>
-#include <string_view>
 #include <fstream>
-#include <filesystem>
-#include <functional>
 #include <mutex>
 
 class ALog

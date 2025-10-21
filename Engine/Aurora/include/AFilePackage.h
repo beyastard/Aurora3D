@@ -1,11 +1,7 @@
 #ifndef _AFILEPACKAGE_H_
 #define _AFILEPACKAGE_H_
 
-#include <string>
-#include <string_view>
-#include <vector>
 #include <fstream>
-#include <cstdint>
 #include <span>
 
 //#define AFPCK_VERSION  0x00010001

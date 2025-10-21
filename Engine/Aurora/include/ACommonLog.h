@@ -1,11 +1,7 @@
 #ifndef _ACOMMON_LOG_H_
 #define _ACOMMON_LOG_H_
 
-#include <Windows.h>
-#include <string>
-#include <string_view>
 #include <functional>
-#include <filesystem>
 
 // Log level enumeration
 enum class LogLevel { Info = 0, Error = 1 };

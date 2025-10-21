@@ -1,6 +1,6 @@
+#include "pch.h"
 #include "ATime.h"
 
-#include <Windows.h>
 #include <chrono>
 
 struct SystemTimeInfo

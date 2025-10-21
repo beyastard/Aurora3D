@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "ACommonLog.h"
 
 #include <mutex>

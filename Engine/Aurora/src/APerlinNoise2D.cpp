@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "APerlinNoise2D.h"
 
 #include <cmath>

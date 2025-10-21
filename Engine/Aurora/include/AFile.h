@@ -1,10 +1,7 @@
 #ifndef _AFILE_H_
 #define _AFILE_H_
 
-#include <string>
-#include <string_view>
 #include <fstream>
-#include <cstdint>
 
 // Flags
 constexpr std::uint32_t AFILE_TYPE_BINARY = 0x42584f4du;

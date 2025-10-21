@@ -1,9 +1,8 @@
+#include "pch.h"
 #include "AFI.h"
 #include "ALog.h"
 #include "APath.h"
 
-#include <filesystem>
-#include <memory>
 #include <cstring>
 
 namespace AFileMod
@@ -29,7 +28,7 @@ namespace AFileMod
 
         // Initialize error log
         g_errorLog = std::make_unique<ALog>();
-        if (!g_errorLog->Init("AF.log", "Angelica File Module Error Log"))
+        if (!g_errorLog->Init("AF.log", "Aurora File Module Error Log"))
         {
             g_errorLog.reset();
             return false;

@@ -1,8 +1,6 @@
+#include "pch.h"
 #include "ALog.h"
 #include "ATime.h"
-
-#include <Windows.h>
-#include <format>
 
 std::string ALog::m_logDir = "Logs";
 std::mutex ALog::m_logDirMutex{};

@@ -1,9 +1,6 @@
 #ifndef _AFI_H_
 #define _AFI_H_
 
-#include <string>
-#include <string_view>
-
 namespace AFileMod
 {
     // Initialize file module (enables compression if needed)

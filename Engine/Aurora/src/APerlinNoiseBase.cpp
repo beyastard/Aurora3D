@@ -1,6 +1,5 @@
+#include "pch.h"
 #include "APerlinNoiseBase.h"
-
-#include <cstdint>
 
 // Constants for the LCG (Park-Miller minimal standard linear congruential generator)
 static constexpr std::uint32_t LCG_MULTIPLIER = 16807U;

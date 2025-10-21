@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "AFile.h"
 #include "AFI.h"
 #include "AFPI.h"

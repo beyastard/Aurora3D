@@ -3,8 +3,6 @@
 
 #include "APerlinNoiseBase.h"
 
-#include <vector>
-
 class APerlinNoise3D : public APerlinNoiseBase
 {
 public:
