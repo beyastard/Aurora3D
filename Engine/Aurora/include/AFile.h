@@ -6,8 +6,6 @@
 #include <fstream>
 #include <cstdint>
 
-using DWORD = std::uint32_t;
-
 // Flags
 constexpr std::uint32_t AFILE_TYPE_BINARY = 0x42584f4du;
 constexpr std::uint32_t AFILE_TYPE_TEXT = 0x54584f4du;
