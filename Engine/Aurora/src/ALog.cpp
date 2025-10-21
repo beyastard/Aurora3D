@@ -1,10 +1,8 @@
 #include "ALog.h"
 #include "ATime.h"
 
+#include <Windows.h>
 #include <format>
-#include <iomanip>
-#include <sstream>
-#include <system_error>
 
 std::string ALog::m_logDir = "Logs";
 std::mutex ALog::m_logDirMutex{};

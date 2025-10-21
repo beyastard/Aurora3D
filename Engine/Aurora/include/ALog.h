@@ -5,6 +5,7 @@
 #include <string_view>
 #include <fstream>
 #include <filesystem>
+#include <functional>
 #include <mutex>
 
 class ALog

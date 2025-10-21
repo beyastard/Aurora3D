@@ -54,6 +54,9 @@
     <ClCompile Include="src\AFilePackage.cpp">
       <Filter>Source Files\File</Filter>
     </ClCompile>
+    <ClCompile Include="src\ACommonLog.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\ATime.h">
@@ -89,5 +92,13 @@
     <ClInclude Include="include\AFilePackage.h">
       <Filter>Header Files\File</Filter>
     </ClInclude>
+    <ClInclude Include="include\ACommonLog.h">
+      <Filter>Header Files\Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="include\ACommonLog_impl.h">
+      <Filter>Header Files\Common</Filter>
+    </None>
   </ItemGroup>
 </Project>
