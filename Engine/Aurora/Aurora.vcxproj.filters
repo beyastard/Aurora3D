@@ -60,6 +60,15 @@
     <ClCompile Include="src\pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\AFileImage.cpp">
+      <Filter>Source Files\File</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AScriptFile.cpp">
+      <Filter>Source Files\File</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AStringTable.cpp">
+      <Filter>Source Files\File</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\ATime.h">
@@ -100,6 +109,15 @@
     </ClInclude>
     <ClInclude Include="include\pch.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AFileImage.h">
+      <Filter>Header Files\File</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AScriptFile.h">
+      <Filter>Header Files\File</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AStringTable.h">
+      <Filter>Header Files\File</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
